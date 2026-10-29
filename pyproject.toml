@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skin-cancer-multimodal"
+version = "1.0.0"
+description = "Sistema de detección multimodal de cáncer de piel (imágenes + datos clínicos) con énfasis en equidad para tipos de piel Fitzpatrick III-VI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Steve" },
+]
+keywords = [
+    "deep-learning",
+    "computer-vision",
+    "skin-cancer",
+    "multimodal",
+    "tabnet",
+    "resnet",
+    "health-equity",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "tensorflow>=2.13.0",
+    "tabnet-keras>=1.3.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "opencv-python>=4.8.0",
+    "pillow>=10.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["functions*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

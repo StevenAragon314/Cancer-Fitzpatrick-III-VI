@@ -1,0 +1,36 @@
+# Entorno conda para el proyecto (compatible con HPC).
+#
+# Creación:
+#   conda env create -f environment.yml
+#   conda activate skin-cancer
+#
+# En un HPC, si no hay acceso a internet, genera el paquete offline:
+#   conda env export --from-history > environment.yml   (solo paquetes)
+#   conda pack -n skin-cancer -o skin-cancer.tar.gz     (empaqueta el env)
+#   # en el HPC:
+#   tar -xzf skin-cancer.tar.gz -C $HOME/skin-cancer-env
+#   source $HOME/skin-cancer-env/bin/activate
+
+name: skin-cancer
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.24
+  - pandas>=2.0
+  - scikit-learn>=1.3
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - opencv>=4.8
+  - pillow>=10.0
+  - tqdm>=4.65
+  - jupyter>=1.0
+  - nbconvert>=7.0
+  - pip:
+      - tensorflow>=2.13
+      - tabnet-keras>=1.3.0
+      - pytest>=7.0
+      - ruff>=0.1.0
+      - black>=23.0.0

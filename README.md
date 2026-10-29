@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Tabla de contenidos
+## Tabla de contenidos
 
 - [Descripción del problema](#-descripción-del-problema)
 - [Motivación](#-motivación)

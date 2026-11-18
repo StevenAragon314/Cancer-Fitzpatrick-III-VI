@@ -188,7 +188,7 @@ Requisitos: Python 3.10+, GPU con CUDA (recomendado para entrenamiento).
 
 ```bash
 # 1. Clonar el repositorio
-git clone <url-del-repositorio>
+git clone https://github.com/StevenAragon314/Cancer-Fitzpatrick-III-VI.git
 cd Project-ComputerVision
 
 # 2. Crear y activar el entorno virtual

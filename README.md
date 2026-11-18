@@ -222,7 +222,7 @@ make lint      # ejecuta el linter
 make clean     # limpia artefactos temporales
 ```
 
-> **Nota:** los notebooks son **portables** (local / Colab / HPC). Cada uno empieza con una celda de configuración que detecta el entorno y define `PROJECT_ROOT`, por lo que no hay rutas duras que ajustar.✅ Tests
+> **Nota:** los notebooks son **portables** (local / Colab / HPC). Cada uno empieza con una celda de configuración que detecta el entorno y define `PROJECT_ROOT`, por lo que no hay rutas duras que ajustar. Tests
 
 El código propio (transformador `BestBinarySplitter`, utilidades) cuenta con tests unitarios:
 
